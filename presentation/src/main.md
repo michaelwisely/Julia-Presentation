@@ -28,19 +28,63 @@ extra-script: "
 
 ## What is Julia?
 
-Julia is a high-level programming language for technical computing.
+Julia is a high-level programming language for technical computing. It
+was designed to incorporate the best features of other technical
+computing tools to create a **blazing fast**, **easy-to-write** language.
 
 ## Motivation
 
-* Reused best-of-the-best libraries from C and Fortran
+In their
+[inaugural blog post](http://julialang.org/blog/2012/02/why-we-created-julia/),
+the authors explained that they created Julia out of greed.
+
+They wanted language that was fast, easy, and usable that would be
+applicable to their own work. Namely:
+
+* Scientific computing
+* Machine learning
+* **Data mining**
+* Large-scale linear algebra
+* Distributed and parallel computing
+
+## Language Facts
+
+* Garbage collected
+* Just-in-time compiled
+* Built on LLVM Compiler Infrastructure
+    * The same framework Clang, Rust, and Swift are built on
+* Reuses best-of-the-best libraries from C and Fortran
+* Cross-platform
+* Designed for distributed and parallel computing
 
 # Why Julia?
 
-## Benchmarks
+## It's High-Level
 
-![Performance relative to `C`. `C` Performance is 1.0](http://i.imgur.com/iXcAFqr.png)
+Like Python or Matlab, its simple syntax makes it easy to get started
+writing programs in Julia.
+
+Julia is imperative, and language constructs are familiar to Ruby,
+Python, and Matlab programmers.
+
+Also, it's garbage collected. You don't have to worry about memory
+unless you want to.
+
+## It's So [Fast](http://julialang.org)
+
+![2012 Study. Performance relative to `C`. `C` Performance is 1.0](http://i.imgur.com/iXcAFqr.png)
+
+## Packages!
+
+The Julia community is growing and releasing a lot of libraries for
+you to use. Julia even has a built-in package manager to make using
+and sharing community packages easy!
+
+[Julia Package Registry](http://pkg.julialang.org/)
 
 # Language Features & Batteries
+
+## Topics
 
 # Functions
 
@@ -97,15 +141,60 @@ If two functions are equally specific, a warning is generated.
 
 [Ambiguous Function Matching](http://localhost:8998/notebooks/Ambiguous%20Functions.ipynb)
 
+## Anonymous Functions
+
+Sometimes it's convenient to write functions that will only be used once.
+
+```julia
+lst = [1, 2, 3, 4]
+squared = map(x -> x * x, lst)
+```
+
+[Anonymous Function Demo](http://localhost:8998/notebooks/Anonymous%20Functions.ipynb)
+
 # Vectors and Matrices
 
+## Julia and Linear Algebra
 
+Linear algebra was one of the focuses the authors considered when
+designing Julia.
+
+If you know Matlab, this should seem familiar
+
+## Indexing
+
+Indexing starts at 1.
+
+<img src="http://i.imgur.com/733gBWb.jpg" style="width:40%;">
+
+## Vectors / Arrays
+
+[Vectors and Arrays Demo](http://localhost:8998/notebooks/Vectors%20and%20Arrays.ipynb)
 
 ## Special Operators
 
+Each of the bracket operators are just shortcuts for other functions.
+
+[Vector And Matrix Function Demo](http://localhost:8998/notebooks/Vector%20and%20Matrix%20Functions.ipynb)
+
 # Types
 
-## Supertypes and Subtypes
+## Types
+
+Julia's blazing performance relies heavily on its type system.
+
+It offers several different types that can be defined by developers:
+
+* Abstract types
+* Bits types
+* Composite types
+* Union types
+
+## Abstract Types
+
+Abstract types cannot be instantiated. Their purpose is to give
+structure to Julia's type hierarchy. The root of the type hierarchy is
+the `Any` type. `<:` can be read as "subtype of."
 
 ```julia
 abstract Number
@@ -116,15 +205,106 @@ abstract Signed   <: Integer
 abstract Unsigned <: Integer
 ```
 
+Implicitly, `Number` is a direct descendant of `Any`.
+
+[Abstract Type Demo](http://localhost:8998/notebooks/Abstract%20Types.ipynb)
+
+## Bits Types
+
+Bits types can be instantiated. They are fixed-width numbers.
+
+If you so choose, you can define your own bits types!
+
+```julia
+bitstype 16 Float16 <: FloatingPoint
+bitstype 32 Float32 <: FloatingPoint
+bitstype 64 Float64 <: FloatingPoint
+```
+
+## Composite Types
+
+Composite types are like structs in C or Go. Each type has members,
+and optional constructors.
+
+```julia
+type MyComplex
+    real::Float64
+    imag::Float64
+
+    MyComplex(r, i) = new(r, i)
+end
+```
+
+[Composite Type Demo](http://localhost:8998/notebooks/Composite%20Types.ipynb)
+
+## Union Types
+
+Union types combine types together. Note that union types are
+different from subtypes.
+
+```julia
+StringOrInteger = Union(AbstractString,Integer)
+```
+
+[Union Type Demo](http://localhost:8998/notebooks/Union%20Types.ipynb)
+
 # Plotting and Drawing
+
+## TextPlots
+
+If you're working on the command line, `TextPlots` makes it convenient
+to show quick plots as text output.
+
+[TextPlots demo](http://localhost:8998/notebooks/TextPlots.ipynb)
 
 ## Gadfly
 
+Gadfly is a prettier alternative to make plots in Julia.
+
+However, it takes a minute to start up.
+
+*Why is that?*
+
+[Gadfly Demo](http://localhost:8998/notebooks/Gadfly.ipynb)
+
+## PyPlot
+
+Yet another plotting library. This one is built on top of Python's
+`matplotlib`.
+
+# Parallel and Distributed Julia
+
+## Parallel Julia
+
+## Distributed Julia
+
 # Getting Julia
+
+## Command line
+
+![Get the binary from <http://julialang.org/downloads/>](http://i.imgur.com/WrAAozT.png)
+
+## Juno
+
+A [Julia IDE](http://junolab.org/) based on [LightTable](http://lighttable.com/).
+
+![For all your code-completing needs.](http://i.imgur.com/WIvdtCO.png)
+
+## IJulia
+
+Install Julia for command line, then install `ipython`.
+
+## JuliaBox
+
+Or, run your code in the cloud!
+
+![<https://www.juliabox.org/>](https://www.juliabox.org/assets/img/juliacloudlogo.png)
 
 # Wildcard
 
 ## Wildcard
+
+Time to pop open a Julia Notebook and try some stuff.
 
 [Get a new notebook](http://127.0.0.1:8998/tree)
 
@@ -163,6 +343,23 @@ libraries to <http://pkg.julialang.org>.
 
 That means developers can spend less time reinventing the wheel and
 more time being productive.
+
+# The Tip of the Iceberg
+
+## Pretty cool so far
+
+![Mind. Blown.](http://i.imgur.com/Bcb2myV.gif)
+
+## Learning the Rest
+
+Like any programming language, there's more to be learned about Julia.
+
+A myriad of built-in and community-driven libraries are available for
+a wide range of domains. If you're interested, go see what's out
+there.
+
+There are [plenty of learning resources](http://julialang.org/learning/)
+available.
 
 # What's next for us?
 

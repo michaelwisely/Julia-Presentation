@@ -99,13 +99,13 @@ and sharing community packages easy!
 ## Topics
 
 * [Functions](#functions)
-* [Multiple Dispatch](#multiple-dispatch)
-* [Vectors and Matrices](#vectors-and-matrices)
-* [Types](#types)
-* [Plotting and Drawing](#plotting-and-drawing)
-* [Parallel and Distributed Julia](#parallel-and-distributed-julia)
-* [Metaprogramming](#metaprogramming)
 * [Getting Julia](#getting-julia)
+* [Metaprogramming](#metaprogramming)
+* [Multiple Dispatch](#multiple-dispatch)
+* [Parallel and Distributed Julia](#parallel-and-distributed-julia)
+* [Plotting and Drawing](#plotting-and-drawing)
+* [Types](#types)
+* [Vectors and Matrices](#vectors-and-matrices)
 * [Wildcard](#wildcard)
 
 # Functions

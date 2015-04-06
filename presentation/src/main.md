@@ -16,9 +16,20 @@ extra-script: "
 ![](https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67)
 
 # Outline
+
+## Outline
+* [Introduction](#introduction)
+* [Why Julia?](#why-julia)
+* [Language Features & Batteries](#language-features-batteries)
+* [The Future of Julia](#the-future-of-julia)
+* [What's next?](#whats-next-for-us)
+
 # Introduction
+
 # Why Julia?
+
 # Language Features & Batteries
+
 # Functions
 
 ## Operators

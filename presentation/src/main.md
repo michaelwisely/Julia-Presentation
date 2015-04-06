@@ -28,9 +28,20 @@ extra-script: "
 
 ## What is Julia?
 
-Julia is a high-level programming language for technical computing. It
-was designed to incorporate the best features of other technical
-computing tools to create a **blazing fast**, **easy-to-write** language.
+Julia is a high-level programming language for technical computing.
+
+## Another Language?
+
+Why do we need *another* programming language?
+
+What could Julia offer that Python, Ruby, Matlab, R, C, Go, ... don't?
+
+## What is Julia?
+
+Julia is a high-level programming language for technical computing.
+
+*It was designed to incorporate the best features of other technical
+computing tools to create a blazing fast, easy-to-write language.*
 
 ## Motivation
 
@@ -56,6 +67,7 @@ applicable to their own work. Namely:
 * Reuses best-of-the-best libraries from C and Fortran
 * Cross-platform
 * Designed for distributed and parallel computing
+* Supports calls to C and Fortran
 
 # Why Julia?
 
@@ -92,6 +104,7 @@ and sharing community packages easy!
 * [Types](#types)
 * [Plotting and Drawing](#plotting-and-drawing)
 * [Parallel and Distributed Julia](#parallel-and-distributed-julia)
+* [Metaprogramming](#metaprogramming)
 * [Getting Julia](#getting-julia)
 * [Wildcard](#wildcard)
 
@@ -285,7 +298,38 @@ Yet another plotting library. This one is built on top of Python's
 
 ## Parallel Julia
 
+When Julia is started, you can specify the number of worker processes
+to use with `$ ./julia -p 2`.
+
+Though Julia offers a number of functions for writing parallel code,
+its set of macros makes it even easier. For example:
+
+* `@spawn` - Do something in another process
+* `@parallel` - Perform a (special) loop in parallel
+
+[Parallel Demo](http://localhost:8998/notebooks/Parallel.ipynb)
+
 ## Distributed Julia
+
+Using a `ClusterManager`, you can launch a series of Julia workers on
+remote machines.
+
+These workers are used the same way as parallel Julia's workers, but
+your code runs on other hardware.
+
+Julia also has mechanisms for migrating data from machine to machine
+to help your application run.
+
+# Metaprogramming
+
+## Metaprogramming
+
+Julia represents its code using Julia data structures.
+
+This makes it convenient to build and evaluate Julia programs... with
+Julia programs.
+
+[Quick Metaprogramming Demo](http://localhost:8998/notebooks/Metaprogramming.ipynb)
 
 # Getting Julia
 

@@ -86,6 +86,15 @@ and sharing community packages easy!
 
 ## Topics
 
+* [Functions](#functions)
+* [Multiple Dispatch](#multiple-dispatch)
+* [Vectors and Matrices](#vectors-and-matrices)
+* [Types](#types)
+* [Plotting and Drawing](#plotting-and-drawing)
+* [Parallel and Distributed Julia](#parallel-and-distributed-julia)
+* [Getting Julia](#getting-julia)
+* [Wildcard](#wildcard)
+
 # Functions
 
 ## Definitions

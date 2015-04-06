@@ -26,11 +26,37 @@ extra-script: "
 
 # Introduction
 
+## What is Julia?
+
+Julia is a high-level programming language for technical computing.
+
+## Motivation
+
+* Reused best-of-the-best libraries from C and Fortran
+
 # Why Julia?
+
+## Benchmarks
+
+![Performance relative to `C`. `C` Performance is 1.0](http://i.imgur.com/iXcAFqr.png)
 
 # Language Features & Batteries
 
 # Functions
+
+## Definitions
+
+Julia offers several ways to define functions:
+
+```julia
+function f(x, y)
+    return x + y
+end
+
+f(x, y) = x + y
+```
+
+[Function Definition Demo](http://localhost:8998/notebooks/Function%20Declaration.ipynb)
 
 ## Operators
 
@@ -49,13 +75,16 @@ end
 
 [Operator Demo](http://127.0.0.1:8998/notebooks/Operators.ipynb)
 
-# Vectors and Matrices
-
-## Special Operators
-
-
-
 # Multiple Dispatch
+
+## What is it?
+
+Developers are free to implement functions with a variety of type
+signatures to handle different usage.
+
+Julia decides **at runtime** which version of a function to use.
+
+[Multiple Dispatch Demo](http://localhost:8998/notebooks/Multiple%20Dispatch.ipynb)
 
 ## Ambiguity
 
@@ -65,6 +94,33 @@ Methods are stored in order of specificity. The function with the more
 specific type signature will be the one that's used.
 
 If two functions are equally specific, a warning is generated.
+
+[Ambiguous Function Matching](http://localhost:8998/notebooks/Ambiguous%20Functions.ipynb)
+
+# Vectors and Matrices
+
+
+
+## Special Operators
+
+# Types
+
+## Supertypes and Subtypes
+
+```julia
+abstract Number
+abstract Real     <: Number
+abstract FloatingPoint <: Real
+abstract Integer  <: Real
+abstract Signed   <: Integer
+abstract Unsigned <: Integer
+```
+
+# Plotting and Drawing
+
+## Gadfly
+
+# Getting Julia
 
 # Wildcard
 

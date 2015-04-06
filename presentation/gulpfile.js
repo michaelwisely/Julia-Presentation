@@ -27,6 +27,9 @@ gulp.task('default', function() {
     // Use Markdown
     opts.args.push('--from=markdown+yaml_metadata_block+inline_code_attributes');
 
+    // Use MathJax
+    opts.args.push('--mathjax=https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML');
+
     // Set highlighting style
     opts.args.push('--highlight-style=kate');
 

@@ -1,0 +1,24 @@
+{
+  "name": "notes",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-spawn-shim": "~0",
+    "gulp": "~3",
+    "gulp-util": "~2",
+    "gulp-rename": "~0",
+    "gulp-plumber": "~0",
+    "gulp-watch": "~0",
+    "gulp-ignore": "~0",
+    "gulp-livereload": "~3",
+    "tiny-lr": "~0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -15,10 +15,6 @@ extra-script: "
 
 <img src="https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67" style="width:50%"/>
 
-Michael Wisely
-
-Aaron Pope
-
 # Outline
 
 ## Outline
@@ -58,7 +54,7 @@ applicable to their own work. Namely:
 
 * Scientific computing
 * Machine learning
-* **Data mining**
+* Data mining
 * Large-scale linear algebra
 * Distributed and parallel computing
 
@@ -169,7 +165,7 @@ If two functions are equally specific, a warning is generated.
 
 ## Anonymous Functions
 
-Sometimes it's convenient to write functions that will only be used once.
+Sometimes it's convenient to write functions on the fly.
 
 ```julia
 lst = [1, 2, 3, 4]
@@ -324,6 +320,8 @@ your code runs on other hardware.
 Julia also has mechanisms for migrating data from machine to machine
 to help your application run.
 
+*Distributed demo?*
+
 # Metaprogramming
 
 ## Metaprogramming
@@ -418,14 +416,6 @@ there.
 There are [plenty of learning resources](http://julialang.org/learning/)
 available.
 
-# What's next for us?
-
-## Data Mining with Julia
-
-* `DataFrames.jl` and `Stats.jl`
-* What kinds of packages are already available?
-* Can it really replace R?
-
-## Find out next time
+## Find out more
 
 ![](http://i.kinja-img.com/gawker-media/image/upload/s--1nJMHTaH--/654763566364366513.png)

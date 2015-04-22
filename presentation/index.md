@@ -9,7 +9,7 @@ style: "
 "
 
 extra-script: "
-    Reveal.configure({controls: false});
+    Reveal.configure({controls: true});
 "
 ...
 
@@ -22,7 +22,6 @@ extra-script: "
 * [Why Julia?](#why-julia)
 * [Language Features & Batteries](#language-features-batteries)
 * [The Future of Julia](#the-future-of-julia)
-* [What's next?](#whats-next-for-us)
 
 # Introduction
 
@@ -106,7 +105,6 @@ and sharing community packages easy!
 * [Plotting and Drawing](#plotting-and-drawing)
 * [Types](#types)
 * [Vectors and Matrices](#vectors-and-matrices)
-* [Wildcard](#wildcard)
 
 # Functions
 
@@ -138,6 +136,7 @@ function +(a::Complex, b::Complex)
   Complex(a.real + b.real, a.imag + b.imag)
 end
 ```
+
 
 [Operator Demo](http://localhost:8889/notebooks/Operators.ipynb)
 
@@ -348,13 +347,6 @@ Or, run your code in the cloud!
 
 ![<https://www.juliabox.org/>](https://www.juliabox.org/assets/img/juliacloudlogo.png)
 
-# Wildcard
-
-## Wildcard
-
-Time to pop open a Julia Notebook and try some stuff.
-
-[Get a new notebook](http://localhost:8889/tree)
 
 # The Future of Julia
 

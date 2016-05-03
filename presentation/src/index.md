@@ -141,6 +141,17 @@ end
 
 [Operator Demo](http://127.0.0.1:8888/notebooks/Operators.ipynb)
 
+## Anonymous Functions
+
+Sometimes it's convenient to write functions that will only be used once.
+
+```julia
+lst = [1, 2, 3, 4]
+squared = map(x -> x * x, lst)
+```
+
+[Anonymous Function Demo](http://localhost:8888/notebooks/Anonymous%20Functions.ipynb)
+
 # Multiple Dispatch
 
 ## What is it?
@@ -162,17 +173,6 @@ specific type signature will be the one that's used.
 If two functions are equally specific, a warning is generated.
 
 [Ambiguous Function Matching](http://localhost:8888/notebooks/Ambiguous%20Functions.ipynb)
-
-## Anonymous Functions
-
-Sometimes it's convenient to write functions on the fly.
-
-```julia
-lst = [1, 2, 3, 4]
-squared = map(x -> x * x, lst)
-```
-
-[Anonymous Function Demo](http://localhost:8888/notebooks/Anonymous%20Functions.ipynb)
 
 # Vectors and Matrices
 

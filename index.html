@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/reveal.css"/>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #dddddd; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { color: #800000; } /* DataType */
+code > span.dv { color: #0000ff; } /* DecVal */
+code > span.bn { color: #0000ff; } /* BaseN */
+code > span.fl { color: #800080; } /* Float */
+code > span.ch { color: #ff00ff; } /* Char */
+code > span.st { color: #dd0000; } /* String */
+code > span.co { color: #808080; font-style: italic; } /* Comment */
+code > span.al { color: #00ff00; font-weight: bold; } /* Alert */
+code > span.fu { color: #000080; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #ff0000; font-weight: bold; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #ff00ff; } /* SpecialChar */
+code > span.vs { color: #dd0000; } /* VerbatimString */
+code > span.ss { color: #dd0000; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #808080; font-style: italic; } /* Documentation */
+code > span.an { color: #808080; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #808080; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/theme/white.css" id="theme">
+  <style type="text/css">
+    .reveal section img { border:none; box-shadow:none;} .reveal pre code { background: #F8F8F8; color: #3F3F3F; }
+  </style>
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<p><img src="https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67" style="width:50%"/></p>
+<p><em>Type</em> <code>?</code> <em>for help</em></p>
+</section>
+<section><section id="outline" class="titleslide slide level1"><h1>Outline</h1></section><section id="outline-1" class="slide level2">
+<h1>Outline</h1>
+<ul>
+<li><a href="#/introduction">Introduction</a></li>
+<li><a href="#/why-julia">Why Julia?</a></li>
+<li><a href="#/language-features-batteries">Language Features &amp; Batteries</a></li>
+<li><a href="#/the-future-of-julia">The Future of Julia</a></li>
+</ul>
+</section></section>
+<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="what-is-julia" class="slide level2">
+<h1>What is Julia?</h1>
+<p>Julia is a high-level programming language for technical computing.</p>
+</section><section id="another-language" class="slide level2">
+<h1>Another Language?</h1>
+<p>Why do we need <em>another</em> programming language?</p>
+<p>What could Julia offer that Python, Ruby, Matlab, R, C, Go, ... don't?</p>
+</section><section id="what-is-julia-1" class="slide level2">
+<h1>What is Julia?</h1>
+<p>Julia is a high-level programming language for technical computing.</p>
+<p><em>It was designed to incorporate the best features of other technical computing tools to create a blazing fast, easy-to-write language.</em></p>
+</section><section id="motivation" class="slide level2">
+<h1>Motivation</h1>
+<p>In their <a href="http://julialang.org/blog/2012/02/why-we-created-julia/">inaugural blog post</a>, the authors explained that they created Julia out of greed.</p>
+<p>They wanted language that was fast, easy, and usable that would be applicable to their own work. Namely:</p>
+<ul>
+<li>Scientific computing</li>
+<li>Machine learning</li>
+<li>Data mining</li>
+<li>Large-scale linear algebra</li>
+<li>Distributed and parallel computing</li>
+</ul>
+</section><section id="language-facts" class="slide level2">
+<h1>Language Facts</h1>
+<ul>
+<li>Garbage collected</li>
+<li>Just-in-time compiled</li>
+<li>Built on LLVM Compiler Infrastructure
+<ul>
+<li>The same framework Clang, Rust, and Swift are built on</li>
+</ul></li>
+<li>Reuses best-of-the-best libraries from C and Fortran</li>
+<li>Cross-platform</li>
+<li>Designed for distributed and parallel computing</li>
+<li>Supports calls to C and Fortran</li>
+</ul>
+</section></section>
+<section><section id="why-julia" class="titleslide slide level1"><h1>Why Julia?</h1></section><section id="its-high-level" class="slide level2">
+<h1>It's High-Level</h1>
+<p>Like Python or Matlab, its simple syntax makes it easy to get started writing programs in Julia.</p>
+<p>Julia is imperative, and language constructs are familiar to Ruby, Python, and Matlab programmers.</p>
+<p>Also, it's garbage collected. You don't have to worry about memory unless you want to.</p>
+</section><section id="its-so-fast" class="slide level2">
+<h1>It's So <a href="http://julialang.org">Fast</a></h1>
+<figure>
+<img src="http://i.imgur.com/iXcAFqr.png" alt="2012 Study. Performance relative to C. C Performance is 1.0" /><figcaption>2012 Study. Performance relative to <code>C</code>. <code>C</code> Performance is 1.0</figcaption>
+</figure>
+</section><section id="packages" class="slide level2">
+<h1>Packages!</h1>
+<p>The Julia community is growing and releasing a lot of libraries for you to use. Julia even has a built-in package manager to make using and sharing community packages easy!</p>
+<p><a href="http://pkg.julialang.org/">Julia Package Registry</a></p>
+</section></section>
+<section><section id="language-features-batteries" class="titleslide slide level1"><h1>Language Features &amp; Batteries</h1></section><section id="topics" class="slide level2">
+<h1>Topics</h1>
+<ul>
+<li><a href="#/functions">Functions</a></li>
+<li><a href="#/getting-julia">Getting Julia</a></li>
+<li><a href="#/metaprogramming">Metaprogramming</a></li>
+<li><a href="#/multiple-dispatch">Multiple Dispatch</a></li>
+<li><a href="#/parallel-and-distributed-julia">Parallel and Distributed Julia</a></li>
+<li><a href="#/plotting-and-drawing">Plotting and Drawing</a></li>
+<li><a href="#/types">Types</a></li>
+<li><a href="#/vectors-and-matrices">Vectors and Matrices</a></li>
+</ul>
+</section></section>
+<section><section id="functions" class="titleslide slide level1"><h1>Functions</h1></section><section id="definitions" class="slide level2">
+<h1>Definitions</h1>
+<p>Julia offers several ways to define functions:</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> f(x, y)
+    <span class="kw">return</span> x + y
+<span class="kw">end</span>
+
+f(x, y) = x + y</code></pre></div>
+<p><a href="notebooks/Function%20Declaration.html">Function Definition Demo</a></p>
+</section><section id="operators" class="slide level2">
+<h1>Operators</h1>
+<p>Operators are just normal functions, but with special calling syntax.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">type</span> <span class="dt">Complex</span>
+    real::<span class="dt">Float64</span>
+    imag::<span class="dt">Float64</span>
+<span class="kw">end</span>
+
+<span class="kw">function</span> +(a::<span class="dt">Complex</span>, b::<span class="dt">Complex</span>)
+  <span class="dt">Complex</span>(a.real + b.real, a.imag + b.imag)
+<span class="kw">end</span></code></pre></div>
+<p><a href="http://127.0.0.1:8888/notebooks/Operators.html">Operator Demo</a></p>
+</section><section id="anonymous-functions" class="slide level2">
+<h1>Anonymous Functions</h1>
+<p>Sometimes it's convenient to write functions that will only be used once.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">lst = [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]
+squared = map(x -&gt; x * x, lst)</code></pre></div>
+<p><a href="notebooks/Anonymous%20Functions.html">Anonymous Function Demo</a></p>
+</section></section>
+<section><section id="multiple-dispatch" class="titleslide slide level1"><h1>Multiple Dispatch</h1></section><section id="what-is-it" class="slide level2">
+<h1>What is it?</h1>
+<p>Developers are free to implement functions with a variety of type signatures to handle different usage.</p>
+<p>Julia decides <strong>at runtime</strong> which version of a function to use.</p>
+<p><a href="notebooks/Multiple%20Dispatch.html">Multiple Dispatch Demo</a></p>
+</section><section id="ambiguity" class="slide level2">
+<h1>Ambiguity</h1>
+<p>What happens when multiple function signatures fit?</p>
+<p>Methods are stored in order of specificity. The function with the more specific type signature will be the one that's used.</p>
+<p>If two functions are equally specific, a warning is generated.</p>
+<p><a href="notebooks/Ambiguous%20Functions.html">Ambiguous Function Matching</a></p>
+</section></section>
+<section><section id="vectors-and-matrices" class="titleslide slide level1"><h1>Vectors and Matrices</h1></section><section id="julia-and-linear-algebra" class="slide level2">
+<h1>Julia and Linear Algebra</h1>
+<p>Linear algebra was one of the focuses the authors considered when designing Julia.</p>
+<p>If you know Matlab, this should seem familiar</p>
+</section><section id="indexing" class="slide level2">
+<h1>Indexing</h1>
+<p>Indexing starts at 1.</p>
+<p><img src="http://i.imgur.com/733gBWb.jpg" style="width:40%;"></p>
+</section><section id="vectors-arrays" class="slide level2">
+<h1>Vectors / Arrays</h1>
+<p><a href="notebooks/Vectors%20and%20Arrays.html">Vectors and Arrays Demo</a></p>
+</section><section id="special-operators" class="slide level2">
+<h1>Special Operators</h1>
+<p>Each of the bracket operators are just shortcuts for other functions.</p>
+<p><a href="notebooks/Vector%20and%20Matrix%20Functions.html">Vector And Matrix Function Demo</a></p>
+</section></section>
+<section><section id="types" class="titleslide slide level1"><h1>Types</h1></section><section id="types-1" class="slide level2">
+<h1>Types</h1>
+<p>Julia's blazing performance relies heavily on its type system.</p>
+<p>It offers several different types that can be defined by developers:</p>
+<ul>
+<li>Abstract types</li>
+<li>Bits types</li>
+<li>Composite types</li>
+<li>Union types</li>
+</ul>
+</section><section id="abstract-types" class="slide level2">
+<h1>Abstract Types</h1>
+<p>Abstract types cannot be instantiated. Their purpose is to give structure to Julia's type hierarchy. The root of the type hierarchy is the <code>Any</code> type. <code>&lt;:</code> can be read as &quot;subtype of.&quot;</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">abstract</span> <span class="dt">Number</span>
+<span class="kw">abstract</span> <span class="dt">Real</span>     &lt;: <span class="dt">Number</span>
+<span class="kw">abstract</span> FloatingPoint &lt;: <span class="dt">Real</span>
+<span class="kw">abstract</span> <span class="dt">Integer</span>  &lt;: <span class="dt">Real</span>
+<span class="kw">abstract</span> <span class="dt">Signed</span>   &lt;: <span class="dt">Integer</span>
+<span class="kw">abstract</span> <span class="dt">Unsigned</span> &lt;: <span class="dt">Integer</span></code></pre></div>
+<p>Implicitly, <code>Number</code> is a direct descendant of <code>Any</code>.</p>
+<p><a href="notebooks/Abstract%20Types.html">Abstract Type Demo</a></p>
+</section><section id="bits-types" class="slide level2">
+<h1>Bits Types</h1>
+<p>Bits types can be instantiated. They are fixed-width numbers.</p>
+<p>If you so choose, you can define your own bits types!</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">bitstype</span> <span class="fl">16</span> Float16 &lt;: FloatingPoint
+<span class="kw">bitstype</span> <span class="fl">32</span> <span class="dt">Float32</span> &lt;: FloatingPoint
+<span class="kw">bitstype</span> <span class="fl">64</span> <span class="dt">Float64</span> &lt;: FloatingPoint</code></pre></div>
+</section><section id="composite-types" class="slide level2">
+<h1>Composite Types</h1>
+<p>Composite types are like structs in C or Go. Each type has members, and optional constructors.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">type</span> MyComplex
+    real::<span class="dt">Float64</span>
+    imag::<span class="dt">Float64</span>
+
+    MyComplex(r, i) = new(r, i)
+<span class="kw">end</span></code></pre></div>
+<p><a href="notebooks/Composite%20Types.html">Composite Type Demo</a></p>
+</section><section id="union-types" class="slide level2">
+<h1>Union Types</h1>
+<p>Union types combine types together. Note that union types are different from subtypes.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">StringOrInteger = <span class="dt">Union</span>(AbstractString,<span class="dt">Integer</span>)</code></pre></div>
+<p><a href="notebooks/Union%20Types.html">Union Type Demo</a></p>
+</section></section>
+<section><section id="plotting-and-drawing" class="titleslide slide level1"><h1>Plotting and Drawing</h1></section><section id="gadfly" class="slide level2">
+<h1>Gadfly</h1>
+<p>Gadfly is a prettier alternative to make plots in Julia.</p>
+<p>However, it takes a minute to start up.</p>
+<p><em>Why is that?</em></p>
+<p><a href="notebooks/Gadfly.html">Gadfly Demo</a></p>
+</section><section id="pyplot" class="slide level2">
+<h1>PyPlot</h1>
+<p>Yet another plotting library. This one is built on top of Python's <code>matplotlib</code>.</p>
+</section></section>
+<section><section id="parallel-and-distributed-julia" class="titleslide slide level1"><h1>Parallel and Distributed Julia</h1></section><section id="parallel-julia" class="slide level2">
+<h1>Parallel Julia</h1>
+<p>When Julia is started, you can specify the number of worker processes to use with <code>$ ./julia -p 2</code>.</p>
+<p>Though Julia offers a number of functions for writing parallel code, its set of macros makes it even easier. For example:</p>
+<ul>
+<li><code>@spawn</code> - Do something in another process</li>
+<li><code>@parallel</code> - Perform a (special) loop in parallel</li>
+</ul>
+<p><a href="notebooks/Parallel.html">Parallel Demo</a></p>
+</section><section id="distributed-julia" class="slide level2">
+<h1>Distributed Julia</h1>
+<p>Using a <code>ClusterManager</code>, you can launch a series of Julia workers on remote machines.</p>
+<p>These workers are used the same way as parallel Julia's workers, but your code runs on other hardware.</p>
+<p>Julia also has mechanisms for migrating data from machine to machine to help your application run.</p>
+<p><em>Distributed demo?</em></p>
+</section></section>
+<section><section id="metaprogramming" class="titleslide slide level1"><h1>Metaprogramming</h1></section><section id="metaprogramming-1" class="slide level2">
+<h1>Metaprogramming</h1>
+<p>Julia represents its code using Julia data structures.</p>
+<p>This makes it convenient to build and evaluate Julia programs... with Julia programs.</p>
+<p><a href="notebooks/Metaprogramming.html">Quick Metaprogramming Demo</a></p>
+</section></section>
+<section><section id="getting-julia" class="titleslide slide level1"><h1>Getting Julia</h1></section><section id="command-line" class="slide level2">
+<h1>Command line</h1>
+<figure>
+<img src="http://i.imgur.com/WrAAozT.png" alt="Get the binary from http://julialang.org/downloads/" /><figcaption>Get the binary from <a href="http://julialang.org/downloads/" class="uri">http://julialang.org/downloads/</a></figcaption>
+</figure>
+</section><section id="juno" class="slide level2">
+<h1>Juno</h1>
+<p>A <a href="http://junolab.org/">Julia IDE</a> based on <a href="http://lighttable.com/">LightTable</a>.</p>
+<figure>
+<img src="http://i.imgur.com/WIvdtCO.png" alt="For all your code-completing needs." /><figcaption>For all your code-completing needs.</figcaption>
+</figure>
+</section><section id="ijulia" class="slide level2">
+<h1>IJulia</h1>
+<p>Install Julia for command line, then install <code>ipython</code>.</p>
+</section><section id="juliabox" class="slide level2">
+<h1>JuliaBox</h1>
+<p>Or, run your code in the cloud!</p>
+<figure>
+<img src="https://www.juliabox.org/assets/img/juliacloudlogo.png" alt="https://www.juliabox.org/" /><figcaption><a href="https://www.juliabox.org/" class="uri">https://www.juliabox.org/</a></figcaption>
+</figure>
+</section></section>
+<section><section id="wildcard" class="titleslide slide level1"><h1>Wildcard</h1></section><section id="wildcard-1" class="slide level2">
+<h1>Wildcard</h1>
+<p>Time to pop open a Julia Notebook and try some stuff.</p>
+<p><a href="http://127.0.0.1:8888/tree">Get a new notebook</a></p>
+</section></section>
+<section><section id="the-future-of-julia" class="titleslide slide level1"><h1>The Future of Julia</h1></section><section id="growing-interest" class="slide level2">
+<h1>Growing Interest</h1>
+<p>According to a survey done by <a href="http://www.kdnuggets.com/2014/08/four-main-languages-analytics-data-mining-data-science.html">KDNuggets</a>,</p>
+<pre><code>3. Languages with the highest growth in 2014 were
+
+Julia, 316% growth, from 0.7% share in 2013 to 2.9% in 2014
+SAS, 76% growth, from 20.8% in 2013 to 36.4% in 2014
+Scala, 74% growth, from 2.2% in 2013 to 3.9% in 2014</code></pre>
+<p><small><i>2013 Survey: 713 Participants</i></small> <br> <small><i>2014 Survey: 719 Participants</i></small></p>
+</section><section class="slide level2">
+
+<p><em>What will it take for</em> <strong>you</strong> <em>to start using Julia?</em></p>
+</section><section class="slide level2">
+
+<p><em>What will it take for Julia to be successful?</em></p>
+</section><section id="packages-1" class="slide level2">
+<h1>Packages!</h1>
+<p>Community involvement <span class="math inline">\(\implies\)</span> Community packages</p>
+<p>As the Julia community grows, more users will open source their libraries to <a href="http://pkg.julialang.org" class="uri">http://pkg.julialang.org</a>.</p>
+<p>That means developers can spend less time reinventing the wheel and more time being productive.</p>
+</section></section>
+<section><section id="the-tip-of-the-iceberg" class="titleslide slide level1"><h1>The Tip of the Iceberg</h1></section><section id="pretty-cool-so-far" class="slide level2">
+<h1>Pretty cool so far</h1>
+<figure>
+<img src="http://i.imgur.com/Bcb2myV.gif" alt="Mind. Blown." /><figcaption>Mind. Blown.</figcaption>
+</figure>
+</section><section id="learning-the-rest" class="slide level2">
+<h1>Learning the Rest</h1>
+<p>Like any programming language, there's more to be learned about Julia.</p>
+<p>A myriad of built-in and community-driven libraries are available for a wide range of domains. If you're interested, go see what's out there.</p>
+<p>There are <a href="http://julialang.org/learning/">plenty of learning resources</a> available.</p>
+</section><section id="find-out-more" class="slide level2">
+<h1>Find out more</h1>
+<figure>
+<img src="http://i.kinja-img.com/gawker-media/image/upload/s--1nJMHTaH--/654763566364366513.png" />
+</figure>
+</section></section>
+    </div>
+  </div>
+
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/js/head.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'white', // available themes are in /css/theme
+        transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  
+    <script type="text/javascript">
+    Reveal.configure({controls: true});
+  </script>
+    </body>
+</html>

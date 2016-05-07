@@ -272,13 +272,6 @@ StringOrInteger = Union(AbstractString,Integer)
 
 # Plotting and Drawing
 
-## TextPlots
-
-If you're working on the command line, `TextPlots` makes it convenient
-to show quick plots as text output.
-
-[TextPlots demo](http://localhost:8888/notebooks/TextPlots.ipynb)
-
 ## Gadfly
 
 Gadfly is a prettier alternative to make plots in Julia.

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Abstract Types</title>
+<title>Vectors and Arrays</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,15 +11751,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> f</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Number</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="nb">typeof</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<span class="k">end</span>
-
-<span class="c"># Define `n`, which is type Int64... which is a subtype of Number</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">12</span>
-
-<span class="p">@</span><span class="n">show</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Column Vectors</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -11770,19 +11763,14 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Int64
-f(n) = 144
-</pre>
-</div>
-</div>
-
 <div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>144</pre>
+<pre>3-element Array{Int64,1}:
+ 1
+ 2
+ 3</pre>
 </div>
 
 </div>
@@ -11796,15 +11784,166 @@ f(n) = 144
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> g</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Integer</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="nb">typeof</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<span class="k">end</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Row Vector</span>
+<span class="n">r</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span> <span class="mi">9</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
 
-<span class="c"># Define `n`, which is type Float64... which is NOT a subtype of Int</span>
-<span class="n">m</span> <span class="o">=</span> <span class="mf">12.0</span>
+</div>
+</div>
+</div>
 
-<span class="p">@</span><span class="n">show</span> <span class="n">g</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1×3 Array{Int64,2}:
+ 8  9  10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># A 3x3 Matrix</span>
+<span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Get the bottom, center element</span>
+<span class="n">m</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>8</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Square a matrix</span>
+<span class="n">m</span> <span class="o">*</span> <span class="n">m</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3×3 Array{Int64,2}:
+  30   36   42
+  66   81   96
+ 102  126  150</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Multiply a Vector by a Matrix</span>
+<span class="n">r</span> <span class="o">*</span> <span class="n">m</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1×3 Array{Int64,2}:
+ 114  141  168</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Gotta check your dimensions!</span>
+<span class="n">c</span> <span class="o">*</span> <span class="n">m</span>
 </pre></div>
 
 </div>
@@ -11818,9 +11957,12 @@ f(n) = 144
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_text output_error">
 <pre>
-LoadError: MethodError: `g` has no method matching g(::Float64)
-while loading In[2], in expression starting on line 127
-</pre>
+LoadError: DimensionMismatch(&#34;matrix A has dimensions (3,1), matrix B has dimensions (3,3)&#34;)
+while loading In[7], in expression starting on line 2
+
+ in _generic_matmatmul!(::Array{Int64,2}, ::Char, ::Char, ::Array{Int64,2}, ::Array{Int64,2}) at ./linalg/matmul.jl:456
+ in generic_matmatmul!(::Array{Int64,2}, ::Char, ::Char, ::Array{Int64,2}, ::Array{Int64,2}) at ./linalg/matmul.jl:447
+ in *(::Array{Int64,1}, ::Array{Int64,2}) at ./linalg/matmul.jl:86</pre>
 </div>
 </div>
 
@@ -11830,21 +11972,13 @@ while loading In[2], in expression starting on line 127
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="k">function</span><span class="nf"> h</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="kt">Any</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="nb">typeof</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
-<span class="k">end</span>
-
-<span class="c"># OR...</span>
-<span class="c"># h(x) = x * x</span>
-
-<span class="c"># Define `n`, which is type Float64... which is a subtype of Any</span>
-<span class="n">p</span> <span class="o">=</span> <span class="mf">12.0</span>
-
-<span class="p">@</span><span class="n">show</span> <span class="n">h</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># 3 Dimensional Array</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="kt">Int64</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">fill!</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">n</span>
 </pre></div>
 
 </div>
@@ -11855,19 +11989,25 @@ while loading In[2], in expression starting on line 127
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Float64
-h(p) = 144.0
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>144.0</pre>
+<pre>3×3×3 Array{Int64,3}:
+[:, :, 1] =
+ 0  0  0
+ 0  0  0
+ 0  0  0
+
+[:, :, 2] =
+ 0  0  0
+ 0  0  0
+ 0  0  0
+
+[:, :, 3] =
+ 0  0  0
+ 0  0  0
+ 0  0  0</pre>
 </div>
 
 </div>

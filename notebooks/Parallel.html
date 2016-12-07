@@ -11768,8 +11768,7 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>fetch(r) = [0.8640024565648579 0.9349196179616492
- 0.06125366377293018 0.03306893645404063]
+<pre>fetch(r) = [0.07478 0.0615453; 0.531191 0.583337]
 </pre>
 </div>
 </div>
@@ -11778,9 +11777,9 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>2x2 Array{Float64,2}:
- 0.864002   0.93492  
- 0.0612537  0.0330689</pre>
+<pre>2×2 Array{Float64,2}:
+ 0.07478   0.0615453
+ 0.531191  0.583337 </pre>
 </div>
 
 </div>
@@ -11794,8 +11793,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span></span><span class="c"># What do you think this does?</span>
-<span class="n">nheads</span> <span class="o">=</span> <span class="p">@</span><span class="n">parallel</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">200000000</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># Add up 20,000,000,000 random 0&#39;s and 1&#39;s in parallel</span>
+<span class="c"># (should be roughly 10,000,000,000)</span>
+<span class="p">@</span><span class="n">time</span> <span class="n">nheads</span> <span class="o">=</span> <span class="p">@</span><span class="n">parallel</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">20000000000</span>
     <span class="kt">Int</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="kt">Bool</span><span class="p">))</span>
 <span class="k">end</span>
 
@@ -11812,7 +11812,8 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>nheads = 99992770
+<pre> 47.969828 seconds (149.70 k allocations: 6.505 MB)
+nheads = 10000034096
 </pre>
 </div>
 </div>
@@ -11821,7 +11822,53 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>99992770</pre>
+<pre>10000034096</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span></span><span class="c"># That&#39;s pretty cool... but it&#39;s only using a single worker. Hardly parallel.</span>
+<span class="c"># Let&#39;s give Julia 4 workers and see how fast we can compute the answer.</span>
+
+<span class="n">addprocs</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="p">@</span><span class="n">time</span> <span class="n">nheads</span> <span class="o">=</span> <span class="p">@</span><span class="n">parallel</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">20000000000</span>
+    <span class="kt">Int</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="kt">Bool</span><span class="p">))</span>
+<span class="k">end</span>
+
+<span class="p">@</span><span class="n">show</span> <span class="n">nheads</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> 24.081247 seconds (300.64 k allocations: 12.492 MB)
+nheads = 9999909964
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9999909964</pre>
 </div>
 
 </div>

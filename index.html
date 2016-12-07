@@ -156,7 +156,7 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">end</span>
 
 f(x, y) = x + y</code></pre></div>
-<p><a href="notebooks/Function%20Declaration.html">Function Definition Demo</a></p>
+<p><a href="notebooks/Function+Declaration.html">Function Definition Demo</a></p>
 </section><section id="operators" class="slide level2">
 <h1>Operators</h1>
 <p>Operators are just normal functions, but with special calling syntax.</p>
@@ -168,25 +168,25 @@ f(x, y) = x + y</code></pre></div>
 <span class="kw">function</span> +(a::<span class="dt">Complex</span>, b::<span class="dt">Complex</span>)
   <span class="dt">Complex</span>(a.real + b.real, a.imag + b.imag)
 <span class="kw">end</span></code></pre></div>
-<p><a href="http://127.0.0.1:8888/notebooks/Operators.html">Operator Demo</a></p>
+<p><a href="notebooks/Operators.html">Operator Demo</a></p>
 </section><section id="anonymous-functions" class="slide level2">
 <h1>Anonymous Functions</h1>
 <p>Sometimes it's convenient to write functions that will only be used once.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">lst = [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]
 squared = map(x -&gt; x * x, lst)</code></pre></div>
-<p><a href="notebooks/Anonymous%20Functions.html">Anonymous Function Demo</a></p>
+<p><a href="notebooks/Anonymous+Functions.html">Anonymous Function Demo</a></p>
 </section></section>
 <section><section id="multiple-dispatch" class="titleslide slide level1"><h1>Multiple Dispatch</h1></section><section id="what-is-it" class="slide level2">
 <h1>What is it?</h1>
 <p>Developers are free to implement functions with a variety of type signatures to handle different usage.</p>
 <p>Julia decides <strong>at runtime</strong> which version of a function to use.</p>
-<p><a href="notebooks/Multiple%20Dispatch.html">Multiple Dispatch Demo</a></p>
+<p><a href="notebooks/Multiple+Dispatch.html">Multiple Dispatch Demo</a></p>
 </section><section id="ambiguity" class="slide level2">
 <h1>Ambiguity</h1>
 <p>What happens when multiple function signatures fit?</p>
 <p>Methods are stored in order of specificity. The function with the more specific type signature will be the one that's used.</p>
 <p>If two functions are equally specific, a warning is generated.</p>
-<p><a href="notebooks/Ambiguous%20Functions.html">Ambiguous Function Matching</a></p>
+<p><a href="notebooks/Ambiguous+Functions.html">Ambiguous Function Matching</a></p>
 </section></section>
 <section><section id="vectors-and-matrices" class="titleslide slide level1"><h1>Vectors and Matrices</h1></section><section id="julia-and-linear-algebra" class="slide level2">
 <h1>Julia and Linear Algebra</h1>
@@ -198,11 +198,11 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <p><img src="http://i.imgur.com/733gBWb.jpg" style="width:40%;"></p>
 </section><section id="vectors-arrays" class="slide level2">
 <h1>Vectors / Arrays</h1>
-<p><a href="notebooks/Vectors%20and%20Arrays.html">Vectors and Arrays Demo</a></p>
+<p><a href="notebooks/Vectors+and+Arrays.html">Vectors and Arrays Demo</a></p>
 </section><section id="special-operators" class="slide level2">
 <h1>Special Operators</h1>
 <p>Each of the bracket operators are just shortcuts for other functions.</p>
-<p><a href="notebooks/Vector%20and%20Matrix%20Functions.html">Vector And Matrix Function Demo</a></p>
+<p><a href="notebooks/Vector+and+Matrix+Functions.html">Vector And Matrix Function Demo</a></p>
 </section></section>
 <section><section id="types" class="titleslide slide level1"><h1>Types</h1></section><section id="types-1" class="slide level2">
 <h1>Types</h1>
@@ -224,7 +224,7 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <span class="kw">abstract</span> <span class="dt">Signed</span>   &lt;: <span class="dt">Integer</span>
 <span class="kw">abstract</span> <span class="dt">Unsigned</span> &lt;: <span class="dt">Integer</span></code></pre></div>
 <p>Implicitly, <code>Number</code> is a direct descendant of <code>Any</code>.</p>
-<p><a href="notebooks/Abstract%20Types.html">Abstract Type Demo</a></p>
+<p><a href="notebooks/Abstract+Types.html">Abstract Type Demo</a></p>
 </section><section id="bits-types" class="slide level2">
 <h1>Bits Types</h1>
 <p>Bits types can be instantiated. They are fixed-width numbers.</p>
@@ -241,12 +241,12 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 
     MyComplex(r, i) = new(r, i)
 <span class="kw">end</span></code></pre></div>
-<p><a href="notebooks/Composite%20Types.html">Composite Type Demo</a></p>
+<p><a href="notebooks/Composite+Types.html">Composite Type Demo</a></p>
 </section><section id="union-types" class="slide level2">
 <h1>Union Types</h1>
 <p>Union types combine types together. Note that union types are different from subtypes.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">StringOrInteger = <span class="dt">Union</span>(AbstractString,<span class="dt">Integer</span>)</code></pre></div>
-<p><a href="notebooks/Union%20Types.html">Union Type Demo</a></p>
+<p><a href="notebooks/Union+Types.html">Union Type Demo</a></p>
 </section></section>
 <section><section id="plotting-and-drawing" class="titleslide slide level1"><h1>Plotting and Drawing</h1></section><section id="gadfly" class="slide level2">
 <h1>Gadfly</h1>
@@ -300,11 +300,6 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <figure>
 <img src="https://www.juliabox.org/assets/img/juliacloudlogo.png" alt="https://www.juliabox.org/" /><figcaption><a href="https://www.juliabox.org/" class="uri">https://www.juliabox.org/</a></figcaption>
 </figure>
-</section></section>
-<section><section id="wildcard" class="titleslide slide level1"><h1>Wildcard</h1></section><section id="wildcard-1" class="slide level2">
-<h1>Wildcard</h1>
-<p>Time to pop open a Julia Notebook and try some stuff.</p>
-<p><a href="http://127.0.0.1:8888/tree">Get a new notebook</a></p>
 </section></section>
 <section><section id="the-future-of-julia" class="titleslide slide level1"><h1>The Future of Julia</h1></section><section id="growing-interest" class="slide level2">
 <h1>Growing Interest</h1>
@@ -371,7 +366,7 @@ Scala, 74% growth, from 2.2% in 2013 to 3.9% in 2014</code></pre>
 //          { src: 'http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 ]});
     </script>
-  
+
     <script type="text/javascript">
     Reveal.configure({controls: true});
   </script>

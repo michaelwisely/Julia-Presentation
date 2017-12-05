@@ -14,7 +14,7 @@ extra-script: "
 ...
 
 <img src="https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67" style="width:50%"/>
-
+<
 # Outline
 
 ## Outline
@@ -139,7 +139,7 @@ function +(a::Complex, b::Complex)
 end
 ```
 
-[Operator Demo](http://127.0.0.1:8888/notebooks/Operators.ipynb)
+[Operator Demo](http://localhost:8888/notebooks/Operators.ipynb)
 
 ## Anonymous Functions
 
@@ -354,7 +354,7 @@ Or, run your code in the cloud!
 
 Time to pop open a Julia Notebook and try some stuff.
 
-[Get a new notebook](http://127.0.0.1:8888/tree)
+[Get a new notebook](http://localhost:8888/tree)
 
 # The Future of Julia
 

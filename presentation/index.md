@@ -14,7 +14,7 @@ extra-script: "
 ...
 
 <img src="https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67" style="width:50%"/>
-<
+
 # Outline
 
 ## Outline
@@ -340,13 +340,18 @@ A [Julia IDE](http://junolab.org/) based on [LightTable](http://lighttable.com/)
 
 ## IJulia
 
-Install Julia for command line, then install `ipython`.
+Install Julia, then `Pkg.add("IJulia")`.
+
+~~~ julia
+using IJulia
+notebook()
+~~~
 
 ## JuliaBox
 
 Or, run your code in the cloud!
 
-![<https://www.juliabox.org/>](https://www.juliabox.org/assets/img/juliacloudlogo.png)
+![<https://next.juliabox.com/>](https://auth.juliacomputing.io/dex/static/assets/img/juliacloudlogo.png)
 
 # Wildcard
 
@@ -391,6 +396,8 @@ libraries to <http://pkg.julialang.org>.
 
 That means developers can spend less time reinventing the wheel and
 more time being productive.
+
+KDNuggets identified [some neat ones](https://www.kdnuggets.com/2016/08/top-machine-learning-projects-julia.html) for machine learning.
 
 # The Tip of the Iceberg
 

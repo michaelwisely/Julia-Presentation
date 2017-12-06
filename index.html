@@ -13,37 +13,41 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #dddddd; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #ffffff; color: #1f1c1b; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #ffffff; color: #a0a0a0; border-right: 1px solid #a0a0a0; }
 td.sourceCode { padding-left: 5px; }
-code > span.kw { font-weight: bold; } /* Keyword */
-code > span.dt { color: #800000; } /* DataType */
-code > span.dv { color: #0000ff; } /* DecVal */
-code > span.bn { color: #0000ff; } /* BaseN */
-code > span.fl { color: #800080; } /* Float */
-code > span.ch { color: #ff00ff; } /* Char */
-code > span.st { color: #dd0000; } /* String */
-code > span.co { color: #808080; font-style: italic; } /* Comment */
-code > span.al { color: #00ff00; font-weight: bold; } /* Alert */
-code > span.fu { color: #000080; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #ff0000; font-weight: bold; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #ff00ff; } /* SpecialChar */
-code > span.vs { color: #dd0000; } /* VerbatimString */
-code > span.ss { color: #dd0000; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #808080; font-style: italic; } /* Documentation */
-code > span.an { color: #808080; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #808080; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Information */
+pre, code { color: #1f1c1b; background-color: #ffffff; }
+code > span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code > span.dt { color: #0057ae; } /* DataType */
+code > span.dv { color: #b08000; } /* DecVal */
+code > span.bn { color: #b08000; } /* BaseN */
+code > span.fl { color: #b08000; } /* Float */
+code > span.cn { color: #aa5500; } /* Constant */
+code > span.ch { color: #924c9d; } /* Char */
+code > span.sc { color: #3daee9; } /* SpecialChar */
+code > span.st { color: #bf0303; } /* String */
+code > span.vs { color: #bf0303; } /* VerbatimString */
+code > span.ss { color: #ff5500; } /* SpecialString */
+code > span.im { color: #ff5500; } /* Import */
+code > span.co { color: #898887; } /* Comment */
+code > span.do { color: #607880; } /* Documentation */
+code > span.an { color: #ca60ca; } /* Annotation */
+code > span.cv { color: #0095ff; } /* CommentVar */
+code > span.ot { color: #006e28; } /* Other */
+code > span.fu { color: #644a9b; } /* Function */
+code > span.va { color: #0057ae; } /* Variable */
+code > span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #1f1c1b; } /* Operator */
+code > span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code > span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code > span.pp { color: #006e28; } /* Preprocessor */
+code > span.at { color: #0057ae; } /* Attribute */
+code > span.re { color: #0057ae; } /* RegionMarker */
+code > span.in { color: #b08000; } /* Information */
+code > span.wa { color: #bf0303; } /* Warning */
+code > span.al { color: #bf0303; font-weight: bold; } /* Alert */
+code > span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code > span. { color: #1f1c1b; } /* Normal */
   </style>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/theme/white.css" id="theme">
   <style type="text/css">
@@ -72,30 +76,33 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 <section class="slide level2">
 
 <p><img src="https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67" style="width:50%"/></p>
-<p><em>Type</em> <code>?</code> <em>for help</em></p>
+
+<p><i>Type "?" to see how to use this presentation.</i></p>
+
 </section>
 <section><section id="outline" class="titleslide slide level1"><h1>Outline</h1></section><section id="outline-1" class="slide level2">
-<h1>Outline</h1>
+<h2>Outline</h2>
 <ul>
 <li><a href="#/introduction">Introduction</a></li>
 <li><a href="#/why-julia">Why Julia?</a></li>
 <li><a href="#/language-features-batteries">Language Features &amp; Batteries</a></li>
 <li><a href="#/the-future-of-julia">The Future of Julia</a></li>
+<li><a href="#/whats-next-for-us">What's next?</a></li>
 </ul>
 </section></section>
 <section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="what-is-julia" class="slide level2">
-<h1>What is Julia?</h1>
+<h2>What is Julia?</h2>
 <p>Julia is a high-level programming language for technical computing.</p>
 </section><section id="another-language" class="slide level2">
-<h1>Another Language?</h1>
+<h2>Another Language?</h2>
 <p>Why do we need <em>another</em> programming language?</p>
 <p>What could Julia offer that Python, Ruby, Matlab, R, C, Go, ... don't?</p>
 </section><section id="what-is-julia-1" class="slide level2">
-<h1>What is Julia?</h1>
+<h2>What is Julia?</h2>
 <p>Julia is a high-level programming language for technical computing.</p>
 <p><em>It was designed to incorporate the best features of other technical computing tools to create a blazing fast, easy-to-write language.</em></p>
 </section><section id="motivation" class="slide level2">
-<h1>Motivation</h1>
+<h2>Motivation</h2>
 <p>In their <a href="http://julialang.org/blog/2012/02/why-we-created-julia/">inaugural blog post</a>, the authors explained that they created Julia out of greed.</p>
 <p>They wanted language that was fast, easy, and usable that would be applicable to their own work. Namely:</p>
 <ul>
@@ -106,7 +113,7 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 <li>Distributed and parallel computing</li>
 </ul>
 </section><section id="language-facts" class="slide level2">
-<h1>Language Facts</h1>
+<h2>Language Facts</h2>
 <ul>
 <li>Garbage collected</li>
 <li>Just-in-time compiled</li>
@@ -121,22 +128,22 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 </section></section>
 <section><section id="why-julia" class="titleslide slide level1"><h1>Why Julia?</h1></section><section id="its-high-level" class="slide level2">
-<h1>It's High-Level</h1>
+<h2>It's High-Level</h2>
 <p>Like Python or Matlab, its simple syntax makes it easy to get started writing programs in Julia.</p>
 <p>Julia is imperative, and language constructs are familiar to Ruby, Python, and Matlab programmers.</p>
 <p>Also, it's garbage collected. You don't have to worry about memory unless you want to.</p>
 </section><section id="its-so-fast" class="slide level2">
-<h1>It's So <a href="http://julialang.org">Fast</a></h1>
+<h2>It's So <a href="http://julialang.org">Fast</a></h2>
 <figure>
 <img src="http://i.imgur.com/iXcAFqr.png" alt="2012 Study. Performance relative to C. C Performance is 1.0" /><figcaption>2012 Study. Performance relative to <code>C</code>. <code>C</code> Performance is 1.0</figcaption>
 </figure>
 </section><section id="packages" class="slide level2">
-<h1>Packages!</h1>
+<h2>Packages!</h2>
 <p>The Julia community is growing and releasing a lot of libraries for you to use. Julia even has a built-in package manager to make using and sharing community packages easy!</p>
 <p><a href="http://pkg.julialang.org/">Julia Package Registry</a></p>
 </section></section>
 <section><section id="language-features-batteries" class="titleslide slide level1"><h1>Language Features &amp; Batteries</h1></section><section id="topics" class="slide level2">
-<h1>Topics</h1>
+<h2>Topics</h2>
 <ul>
 <li><a href="#/functions">Functions</a></li>
 <li><a href="#/getting-julia">Getting Julia</a></li>
@@ -149,7 +156,7 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 </section></section>
 <section><section id="functions" class="titleslide slide level1"><h1>Functions</h1></section><section id="definitions" class="slide level2">
-<h1>Definitions</h1>
+<h2>Definitions</h2>
 <p>Julia offers several ways to define functions:</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">function</span> f(x, y)
     <span class="kw">return</span> x + y
@@ -158,7 +165,7 @@ code > span.in { color: #808080; font-weight: bold; font-style: italic; } /* Inf
 f(x, y) = x + y</code></pre></div>
 <p><a href="notebooks/Function+Declaration.html">Function Definition Demo</a></p>
 </section><section id="operators" class="slide level2">
-<h1>Operators</h1>
+<h2>Operators</h2>
 <p>Operators are just normal functions, but with special calling syntax.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">type</span> <span class="dt">Complex</span>
     real::<span class="dt">Float64</span>
@@ -170,42 +177,42 @@ f(x, y) = x + y</code></pre></div>
 <span class="kw">end</span></code></pre></div>
 <p><a href="notebooks/Operators.html">Operator Demo</a></p>
 </section><section id="anonymous-functions" class="slide level2">
-<h1>Anonymous Functions</h1>
+<h2>Anonymous Functions</h2>
 <p>Sometimes it's convenient to write functions that will only be used once.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">lst = [<span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>]
 squared = map(x -&gt; x * x, lst)</code></pre></div>
 <p><a href="notebooks/Anonymous+Functions.html">Anonymous Function Demo</a></p>
 </section></section>
 <section><section id="multiple-dispatch" class="titleslide slide level1"><h1>Multiple Dispatch</h1></section><section id="what-is-it" class="slide level2">
-<h1>What is it?</h1>
+<h2>What is it?</h2>
 <p>Developers are free to implement functions with a variety of type signatures to handle different usage.</p>
 <p>Julia decides <strong>at runtime</strong> which version of a function to use.</p>
 <p><a href="notebooks/Multiple+Dispatch.html">Multiple Dispatch Demo</a></p>
 </section><section id="ambiguity" class="slide level2">
-<h1>Ambiguity</h1>
+<h2>Ambiguity</h2>
 <p>What happens when multiple function signatures fit?</p>
 <p>Methods are stored in order of specificity. The function with the more specific type signature will be the one that's used.</p>
 <p>If two functions are equally specific, a warning is generated.</p>
 <p><a href="notebooks/Ambiguous+Functions.html">Ambiguous Function Matching</a></p>
 </section></section>
 <section><section id="vectors-and-matrices" class="titleslide slide level1"><h1>Vectors and Matrices</h1></section><section id="julia-and-linear-algebra" class="slide level2">
-<h1>Julia and Linear Algebra</h1>
+<h2>Julia and Linear Algebra</h2>
 <p>Linear algebra was one of the focuses the authors considered when designing Julia.</p>
 <p>If you know Matlab, this should seem familiar</p>
 </section><section id="indexing" class="slide level2">
-<h1>Indexing</h1>
+<h2>Indexing</h2>
 <p>Indexing starts at 1.</p>
 <p><img src="http://i.imgur.com/733gBWb.jpg" style="width:40%;"></p>
 </section><section id="vectors-arrays" class="slide level2">
-<h1>Vectors / Arrays</h1>
+<h2>Vectors / Arrays</h2>
 <p><a href="notebooks/Vectors+and+Arrays.html">Vectors and Arrays Demo</a></p>
 </section><section id="special-operators" class="slide level2">
-<h1>Special Operators</h1>
+<h2>Special Operators</h2>
 <p>Each of the bracket operators are just shortcuts for other functions.</p>
 <p><a href="notebooks/Vector+and+Matrix+Functions.html">Vector And Matrix Function Demo</a></p>
 </section></section>
 <section><section id="types" class="titleslide slide level1"><h1>Types</h1></section><section id="types-1" class="slide level2">
-<h1>Types</h1>
+<h2>Types</h2>
 <p>Julia's blazing performance relies heavily on its type system.</p>
 <p>It offers several different types that can be defined by developers:</p>
 <ul>
@@ -215,7 +222,7 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <li>Union types</li>
 </ul>
 </section><section id="abstract-types" class="slide level2">
-<h1>Abstract Types</h1>
+<h2>Abstract Types</h2>
 <p>Abstract types cannot be instantiated. Their purpose is to give structure to Julia's type hierarchy. The root of the type hierarchy is the <code>Any</code> type. <code>&lt;:</code> can be read as &quot;subtype of.&quot;</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">abstract</span> <span class="dt">Number</span>
 <span class="kw">abstract</span> <span class="dt">Real</span>     &lt;: <span class="dt">Number</span>
@@ -226,14 +233,14 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <p>Implicitly, <code>Number</code> is a direct descendant of <code>Any</code>.</p>
 <p><a href="notebooks/Abstract+Types.html">Abstract Type Demo</a></p>
 </section><section id="bits-types" class="slide level2">
-<h1>Bits Types</h1>
+<h2>Bits Types</h2>
 <p>Bits types can be instantiated. They are fixed-width numbers.</p>
 <p>If you so choose, you can define your own bits types!</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">bitstype</span> <span class="fl">16</span> Float16 &lt;: FloatingPoint
 <span class="kw">bitstype</span> <span class="fl">32</span> <span class="dt">Float32</span> &lt;: FloatingPoint
 <span class="kw">bitstype</span> <span class="fl">64</span> <span class="dt">Float64</span> &lt;: FloatingPoint</code></pre></div>
 </section><section id="composite-types" class="slide level2">
-<h1>Composite Types</h1>
+<h2>Composite Types</h2>
 <p>Composite types are like structs in C or Go. Each type has members, and optional constructors.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia"><span class="kw">type</span> MyComplex
     real::<span class="dt">Float64</span>
@@ -243,23 +250,23 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 <span class="kw">end</span></code></pre></div>
 <p><a href="notebooks/Composite+Types.html">Composite Type Demo</a></p>
 </section><section id="union-types" class="slide level2">
-<h1>Union Types</h1>
+<h2>Union Types</h2>
 <p>Union types combine types together. Note that union types are different from subtypes.</p>
 <div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">StringOrInteger = <span class="dt">Union</span>(AbstractString,<span class="dt">Integer</span>)</code></pre></div>
 <p><a href="notebooks/Union+Types.html">Union Type Demo</a></p>
 </section></section>
 <section><section id="plotting-and-drawing" class="titleslide slide level1"><h1>Plotting and Drawing</h1></section><section id="gadfly" class="slide level2">
-<h1>Gadfly</h1>
+<h2>Gadfly</h2>
 <p>Gadfly is a prettier alternative to make plots in Julia.</p>
 <p>However, it takes a minute to start up.</p>
 <p><em>Why is that?</em></p>
 <p><a href="notebooks/Gadfly.html">Gadfly Demo</a></p>
 </section><section id="pyplot" class="slide level2">
-<h1>PyPlot</h1>
+<h2>PyPlot</h2>
 <p>Yet another plotting library. This one is built on top of Python's <code>matplotlib</code>.</p>
 </section></section>
 <section><section id="parallel-and-distributed-julia" class="titleslide slide level1"><h1>Parallel and Distributed Julia</h1></section><section id="parallel-julia" class="slide level2">
-<h1>Parallel Julia</h1>
+<h2>Parallel Julia</h2>
 <p>When Julia is started, you can specify the number of worker processes to use with <code>$ ./julia -p 2</code>.</p>
 <p>Though Julia offers a number of functions for writing parallel code, its set of macros makes it even easier. For example:</p>
 <ul>
@@ -268,41 +275,43 @@ squared = map(x -&gt; x * x, lst)</code></pre></div>
 </ul>
 <p><a href="notebooks/Parallel.html">Parallel Demo</a></p>
 </section><section id="distributed-julia" class="slide level2">
-<h1>Distributed Julia</h1>
+<h2>Distributed Julia</h2>
 <p>Using a <code>ClusterManager</code>, you can launch a series of Julia workers on remote machines.</p>
 <p>These workers are used the same way as parallel Julia's workers, but your code runs on other hardware.</p>
 <p>Julia also has mechanisms for migrating data from machine to machine to help your application run.</p>
 <p><em>Distributed demo?</em></p>
 </section></section>
 <section><section id="metaprogramming" class="titleslide slide level1"><h1>Metaprogramming</h1></section><section id="metaprogramming-1" class="slide level2">
-<h1>Metaprogramming</h1>
+<h2>Metaprogramming</h2>
 <p>Julia represents its code using Julia data structures.</p>
 <p>This makes it convenient to build and evaluate Julia programs... with Julia programs.</p>
 <p><a href="notebooks/Metaprogramming.html">Quick Metaprogramming Demo</a></p>
 </section></section>
 <section><section id="getting-julia" class="titleslide slide level1"><h1>Getting Julia</h1></section><section id="command-line" class="slide level2">
-<h1>Command line</h1>
+<h2>Command line</h2>
 <figure>
 <img src="http://i.imgur.com/WrAAozT.png" alt="Get the binary from http://julialang.org/downloads/" /><figcaption>Get the binary from <a href="http://julialang.org/downloads/" class="uri">http://julialang.org/downloads/</a></figcaption>
 </figure>
 </section><section id="juno" class="slide level2">
-<h1>Juno</h1>
+<h2>Juno</h2>
 <p>A <a href="http://junolab.org/">Julia IDE</a> based on <a href="http://lighttable.com/">LightTable</a>.</p>
 <figure>
 <img src="http://i.imgur.com/WIvdtCO.png" alt="For all your code-completing needs." /><figcaption>For all your code-completing needs.</figcaption>
 </figure>
 </section><section id="ijulia" class="slide level2">
-<h1>IJulia</h1>
-<p>Install Julia for command line, then install <code>ipython</code>.</p>
+<h2>IJulia</h2>
+<p>Install Julia, then <code>Pkg.add(&quot;IJulia&quot;)</code>.</p>
+<div class="sourceCode"><pre class="sourceCode julia"><code class="sourceCode julia">using IJulia
+notebook()</code></pre></div>
 </section><section id="juliabox" class="slide level2">
-<h1>JuliaBox</h1>
+<h2>JuliaBox</h2>
 <p>Or, run your code in the cloud!</p>
 <figure>
-<img src="https://www.juliabox.com/assets/img/juliacloudlogo.png" alt="https://www.juliabox.com/" /><figcaption><a href="https://www.juliabox.com/" class="uri">https://www.juliabox.com/</a></figcaption>
+<img src="https://auth.juliacomputing.io/dex/static/assets/img/juliacloudlogo.png" alt="https://next.juliabox.com/" /><figcaption><a href="https://next.juliabox.com/" class="uri">https://next.juliabox.com/</a></figcaption>
 </figure>
 </section></section>
 <section><section id="the-future-of-julia" class="titleslide slide level1"><h1>The Future of Julia</h1></section><section id="growing-interest" class="slide level2">
-<h1>Growing Interest</h1>
+<h2>Growing Interest</h2>
 <p>According to a survey done by <a href="http://www.kdnuggets.com/2014/08/four-main-languages-analytics-data-mining-data-science.html">KDNuggets</a>,</p>
 <pre><code>3. Languages with the highest growth in 2014 were
 
@@ -317,23 +326,24 @@ Scala, 74% growth, from 2.2% in 2013 to 3.9% in 2014</code></pre>
 
 <p><em>What will it take for Julia to be successful?</em></p>
 </section><section id="packages-1" class="slide level2">
-<h1>Packages!</h1>
+<h2>Packages!</h2>
 <p>Community involvement <span class="math inline">\(\implies\)</span> Community packages</p>
 <p>As the Julia community grows, more users will open source their libraries to <a href="http://pkg.julialang.org" class="uri">http://pkg.julialang.org</a>.</p>
 <p>That means developers can spend less time reinventing the wheel and more time being productive.</p>
+<p>KDNuggets identified <a href="https://www.kdnuggets.com/2016/08/top-machine-learning-projects-julia.html">some neat ones</a> for machine learning.</p>
 </section></section>
 <section><section id="the-tip-of-the-iceberg" class="titleslide slide level1"><h1>The Tip of the Iceberg</h1></section><section id="pretty-cool-so-far" class="slide level2">
-<h1>Pretty cool so far</h1>
+<h2>Pretty cool so far</h2>
 <figure>
 <img src="http://i.imgur.com/Bcb2myV.gif" alt="Mind. Blown." /><figcaption>Mind. Blown.</figcaption>
 </figure>
 </section><section id="learning-the-rest" class="slide level2">
-<h1>Learning the Rest</h1>
+<h2>Learning the Rest</h2>
 <p>Like any programming language, there's more to be learned about Julia.</p>
 <p>A myriad of built-in and community-driven libraries are available for a wide range of domains. If you're interested, go see what's out there.</p>
 <p>There are <a href="http://julialang.org/learning/">plenty of learning resources</a> available.</p>
 </section><section id="find-out-more" class="slide level2">
-<h1>Find out more</h1>
+<h2>Find out more</h2>
 <figure>
 <img src="http://i.kinja-img.com/gawker-media/image/upload/s--1nJMHTaH--/654763566364366513.png" />
 </figure>
@@ -368,7 +378,7 @@ Scala, 74% growth, from 2.2% in 2013 to 3.9% in 2014</code></pre>
     </script>
 
     <script type="text/javascript">
-    Reveal.configure({controls: true});
+    Reveal.configure({controls: false});
   </script>
     </body>
 </html>

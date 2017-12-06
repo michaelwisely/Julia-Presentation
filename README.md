@@ -16,14 +16,9 @@ The presentation in written in
 [Markdown](http://pandoc.org/demo/example9/pandocs-markdown.html), and
 it can be compiled to a [Reveal.js](http://lab.hakim.se/reveal-js/#/)
 slide show using [Pandoc](http://pandoc.org/README.html). There is a
-`gulpfile.js` in `presentation/` that will build the slides.
+`Makefile` in `presentation/` that will build the slides.
 
-You'll need to have `pandoc`, `nodejs`, and `npm` installed to run
-gulp. To build the slides once, run `gulp build`. To have gulp
-continually watch `src/index.md` and rebuild slides as changes are
-made, run `gulp watch` or `gulp`.
-
-That's it! The compiled file is placed in
+After you run `make`, the compiled file is placed in
 `presentation/build/index.html`.
 
 You can also build it with pandoc by running something like...

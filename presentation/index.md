@@ -122,7 +122,7 @@ end
 f(x, y) = x + y
 ```
 
-[Function Definition Demo](http://localhost:8888/notebooks/Function%20Declaration.ipynb)
+[Function Definition Demo](http://localhost:8889/notebooks/Function%20Declaration.ipynb)
 
 ## Operators
 
@@ -150,7 +150,7 @@ lst = [1, 2, 3, 4]
 squared = map(x -> x * x, lst)
 ```
 
-[Anonymous Function Demo](http://localhost:8888/notebooks/Anonymous%20Functions.ipynb)
+[Anonymous Function Demo](http://localhost:8889/notebooks/Anonymous%20Functions.ipynb)
 
 # Multiple Dispatch
 
@@ -161,7 +161,7 @@ signatures to handle different usage.
 
 Julia decides **at runtime** which version of a function to use.
 
-[Multiple Dispatch Demo](http://localhost:8888/notebooks/Multiple%20Dispatch.ipynb)
+[Multiple Dispatch Demo](http://localhost:8889/notebooks/Multiple%20Dispatch.ipynb)
 
 ## Ambiguity
 
@@ -172,7 +172,7 @@ specific type signature will be the one that's used.
 
 If two functions are equally specific, a warning is generated.
 
-[Ambiguous Function Matching](http://localhost:8888/notebooks/Ambiguous%20Functions.ipynb)
+[Ambiguous Function Matching](http://localhost:8889/notebooks/Ambiguous%20Functions.ipynb)
 
 # Vectors and Matrices
 
@@ -191,13 +191,13 @@ Indexing starts at 1.
 
 ## Vectors / Arrays
 
-[Vectors and Arrays Demo](http://localhost:8888/notebooks/Vectors%20and%20Arrays.ipynb)
+[Vectors and Arrays Demo](http://localhost:8889/notebooks/Vectors%20and%20Arrays.ipynb)
 
 ## Special Operators
 
 Each of the bracket operators are just shortcuts for other functions.
 
-[Vector And Matrix Function Demo](http://localhost:8888/notebooks/Vector%20and%20Matrix%20Functions.ipynb)
+[Vector And Matrix Function Demo](http://localhost:8889/notebooks/Vector%20and%20Matrix%20Functions.ipynb)
 
 # Types
 
@@ -229,7 +229,7 @@ abstract Unsigned <: Integer
 
 Implicitly, `Number` is a direct descendant of `Any`.
 
-[Abstract Type Demo](http://localhost:8888/notebooks/Abstract%20Types.ipynb)
+[Abstract Type Demo](http://localhost:8889/notebooks/Abstract%20Types.ipynb)
 
 ## Bits Types
 
@@ -257,7 +257,7 @@ type MyComplex
 end
 ```
 
-[Composite Type Demo](http://localhost:8888/notebooks/Composite%20Types.ipynb)
+[Composite Type Demo](http://localhost:8889/notebooks/Composite%20Types.ipynb)
 
 ## Union Types
 
@@ -268,7 +268,7 @@ different from subtypes.
 StringOrInteger = Union(AbstractString,Integer)
 ```
 
-[Union Type Demo](http://localhost:8888/notebooks/Union%20Types.ipynb)
+[Union Type Demo](http://localhost:8889/notebooks/Union%20Types.ipynb)
 
 # Plotting and Drawing
 
@@ -280,7 +280,7 @@ However, it takes a minute to start up.
 
 *Why is that?*
 
-[Gadfly Demo](http://localhost:8888/notebooks/Gadfly.ipynb)
+[Gadfly Demo](http://localhost:8889/notebooks/Gadfly.ipynb)
 
 ## PyPlot
 
@@ -300,7 +300,7 @@ its set of macros makes it even easier. For example:
 * `@spawn` - Do something in another process
 * `@parallel` - Perform a (special) loop in parallel
 
-[Parallel Demo](http://localhost:8888/notebooks/Parallel.ipynb)
+[Parallel Demo](http://localhost:8889/notebooks/Parallel.ipynb)
 
 ## Distributed Julia
 
@@ -324,7 +324,7 @@ Julia represents its code using Julia data structures.
 This makes it convenient to build and evaluate Julia programs... with
 Julia programs.
 
-[Quick Metaprogramming Demo](http://localhost:8888/notebooks/Metaprogramming.ipynb)
+[Quick Metaprogramming Demo](http://localhost:8889/notebooks/Metaprogramming.ipynb)
 
 # Getting Julia
 
